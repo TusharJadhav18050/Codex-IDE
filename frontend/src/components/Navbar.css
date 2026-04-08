@@ -1,0 +1,39 @@
+.navbar {
+  height: 56px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(10px);
+}
+.navbar-inner {
+  max-width: 1400px; margin: 0 auto;
+  height: 100%; padding: 0 20px;
+  display: flex; align-items: center; gap: 32px;
+}
+.navbar-brand {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; color: var(--text-primary);
+}
+.brand-icon {
+  font-family: var(--font-code); font-size: 18px;
+  color: var(--accent); font-weight: 700;
+}
+.brand-name { font-size: 16px; font-weight: 600; white-space: nowrap; }
+.brand-accent { color: var(--accent); }
+.navbar-links { display: flex; gap: 4px; flex: 1; }
+.nav-link {
+  padding: 6px 12px; border-radius: var(--radius);
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  transition: all 0.15s;
+}
+.nav-link:hover { color: var(--text-primary); background: var(--bg-tertiary); }
+.nav-link.active { color: var(--text-primary); background: var(--bg-tertiary); }
+.navbar-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.nav-user {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-secondary); padding: 0 8px;
+}
+.user-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+}

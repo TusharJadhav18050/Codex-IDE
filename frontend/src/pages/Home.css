@@ -1,0 +1,104 @@
+.home { overflow-x: hidden; }
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex; align-items: center; gap: 60px;
+  padding: 60px 60px;
+  max-width: 1300px; margin: 0 auto;
+  flex-wrap: wrap;
+}
+.hero-glow {
+  position: absolute; top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(88,166,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content { flex: 1; min-width: 300px; }
+.hero-badge {
+  display: inline-block; padding: 6px 14px;
+  background: #1a2a3a; border: 1px solid var(--accent-dim);
+  border-radius: 20px; font-size: 13px; color: var(--accent);
+  margin-bottom: 20px;
+}
+.hero-title { font-size: clamp(42px, 6vw, 72px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
+.gradient-text {
+  background: linear-gradient(135deg, #58a6ff, #bc8cff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-subtitle { font-size: 18px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 32px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-actions .btn { padding: 12px 24px; font-size: 15px; }
+
+.hero-preview {
+  flex: 1; min-width: 300px; max-width: 480px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.preview-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  background: var(--bg-tertiary);
+}
+.preview-dots { display: flex; gap: 6px; }
+.preview-dots span { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.preview-filename { font-family: var(--font-code); font-size: 12px; color: var(--text-secondary); margin-left: 8px; }
+.preview-code {
+  padding: 20px; font-family: var(--font-code); font-size: 13px;
+  color: var(--text-primary); line-height: 1.7; overflow-x: auto;
+}
+.preview-output {
+  padding: 12px 20px; border-top: 1px solid var(--border);
+  background: #0a1628; display: flex; align-items: center; gap: 10px;
+}
+.output-label {
+  font-family: var(--font-code); font-size: 10px;
+  color: var(--green); border: 1px solid var(--green); padding: 2px 6px;
+  border-radius: 4px; letter-spacing: 1px;
+}
+.preview-output code { font-family: var(--font-code); font-size: 13px; color: var(--green); }
+
+/* Sections */
+.section { padding: 80px 60px; }
+.section-alt { background: var(--bg-secondary); }
+.section-title { font-size: 28px; font-weight: 600; margin-bottom: 40px; text-align: center; }
+
+.lang-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;
+}
+.lang-card {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; background: var(--bg-tertiary);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  transition: all 0.2s; cursor: default;
+}
+.lang-card:hover { border-color: var(--lang-color); transform: translateY(-2px); }
+.lang-icon {
+  font-family: var(--font-code); font-size: 11px; font-weight: 700;
+  color: var(--lang-color); background: rgba(0,0,0,0.3);
+  padding: 3px 6px; border-radius: 4px; border: 1px solid var(--lang-color);
+}
+.lang-name { font-size: 13px; font-weight: 500; }
+
+.features-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;
+}
+.feature-card {
+  padding: 24px; background: var(--bg-primary);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  transition: border-color 0.2s;
+}
+.feature-card:hover { border-color: var(--border-bright); }
+.feature-icon { font-size: 28px; display: block; margin-bottom: 12px; }
+.feature-card h3 { font-size: 15px; margin-bottom: 8px; }
+.feature-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+.cta-section {
+  padding: 80px 60px; text-align: center;
+  background: linear-gradient(135deg, #0d2137 0%, var(--bg-primary) 100%);
+}
+.cta-section h2 { font-size: 32px; margin-bottom: 12px; }
+.cta-section p { color: var(--text-secondary); margin-bottom: 28px; font-size: 16px; }
+.cta-section .btn { padding: 14px 32px; font-size: 16px; }
